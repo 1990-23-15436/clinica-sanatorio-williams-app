@@ -4,7 +4,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
 import { Stethoscope, User, CreditCard, Calendar, Phone, Mail, Lock, Loader2 } from 'lucide-react';
 
@@ -17,8 +16,7 @@ const Register = () => {
     phone: '',
     email: '',
     password: '',
-    confirmPassword: '',
-    role: ''
+    confirmPassword: ''
   });
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
@@ -27,13 +25,6 @@ const Register = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
-  const handleSelectChange = (valor: string) => {
-    setFormData({
-      ...formData,
-      role: valor
-    });
-  }; 
 
   const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -47,18 +38,7 @@ const Register = () => {
       return;
     }
 
-    if (!formData.role) {
-      toast({
-        variant: 'destructive',
-        title: 'Error',
-        description: 'Por favor selecciona tu rol.',
-      });
-      return;
-    }
-
     setLoading(true);
-
-    console.log('rol', formData.role);
 
     try{
       const response = await fetch(`${API_URL}/api/register`, {
@@ -100,13 +80,13 @@ const Register = () => {
       
       <Card className="w-full max-w-lg shadow-card animate-fade-in relative z-10">
         <CardHeader className="text-center space-y-4">
-          <div className="mx-auto w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
+          <div className="mx-auto w-20 h-16 gradient-primary rounded-2xl flex items-center justify-center shadow-lg">
             <Stethoscope className="w-8 h-8 text-primary-foreground" />
           </div>
           <div>
             <CardTitle className="text-2xl font-display">Registro de Personal</CardTitle>
             <CardDescription className="mt-2">
-              Completa el formulario para crear tu cuenta
+              Completa el formulario para crear tu cuenta de Médico
             </CardDescription>
           </div>
         </CardHeader>
@@ -195,22 +175,6 @@ const Register = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="role">Rol</Label>
-                <Select 
-                  value={formData.role} 
-                  onValueChange={handleSelectChange}
-                >
-                  <SelectTrigger>
-                    <SelectValue placeholder="Selecciona tu rol" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="medico">Médico</SelectItem>
-                    <SelectItem value="secretario">Administración</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="space-y-2 md:col-span-2">
                 <Label htmlFor="email">Correo Electrónico</Label>
                 <div className="relative">
                   <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
@@ -293,7 +257,5 @@ const Register = () => {
     </div>
   );
 };
-
-
 
 export default Register;

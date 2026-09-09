@@ -247,7 +247,7 @@ const Expedientes = () => {
     
     try {
         let nombreImagenFinal = "";
-        const fechaLimpia = editFormData.birthDate.split('T')[0];
+        const fechaLimpia = editFormData?.birthDate ? editFormData.birthDate.split('T')[0] : null;
 
         // 1. Si hay una imagen seleccionada, la subimos primero
         if (tempFiles.length > 0) {
@@ -270,7 +270,7 @@ const Expedientes = () => {
         const datosAEnviar = {
             ...editFormData,
             birthDate: fechaLimpia,
-            age: calcularEdad(editFormData.birthDate),
+            age: calcularEdad(editFormData?.birthDate),
             img_name: nombreImagenFinal || editFormData?.img_list?.[0] || "" // Nueva o la que ya tenía
         };
 
