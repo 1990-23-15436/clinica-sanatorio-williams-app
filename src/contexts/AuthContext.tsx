@@ -46,6 +46,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
   
   useEffect(() => {
+    /*
     // Este bloque permite entrar al dashboard sin loguearse
     if (import.meta.env.VITE_DEMO_MODE === 'true') {
       setUser({
@@ -61,6 +62,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       setLoading(false);
       return; // no llega a tocar localStorage
     }
+    */
 
     // Al cargar la app, revisamos si hay una sesión guardada en la laptop
     const savedUser = localStorage.getItem('userSession');
