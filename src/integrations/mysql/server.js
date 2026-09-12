@@ -164,8 +164,7 @@ app.get('/api/verify-email', async (req, res) => {
 
         const sqlUpdate = "UPDATE Perfil SET email_verificado = 1 WHERE id_perfil = :1";
         await pool.query(sqlUpdate, [sqlcheck.id_perfil]);
-        res.status(200).json({ message: "Correo verificado exitosamente" });
-        //return res.redirect(`${URLS.FRONTEND}/login?verified=true`);
+        return res.redirect(`${URLS.FRONTEND}/login?verified=true`);
         
     } catch (error) {
         console.error("Error en verificación de email:", error);
