@@ -30,7 +30,7 @@ export const transporterCustomer = nodemailer.createTransport({
 
 // 1. Correo de verificación para el usuario/médico que se registra
 export async function sendVerificationEmail(to, token, nombres) {
-  const verificationLink = `${URLS.BACKEND}/api/verify-email?token=${token}`;
+  const verificationLink = `${URLS.FRONTEND}/api/verify-email?token=${token}`; // Cambiado de URLS.BACKEND a URLS.FRONTEND para redirigir al frontend
   const mailOptions = {
     from: EMAIL.EMAIL_USER,
     to: to,

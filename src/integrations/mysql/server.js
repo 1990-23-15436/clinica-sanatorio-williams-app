@@ -18,6 +18,7 @@ const port = 3000;
 // Configuración unificada de CORS para permitir solicitudes desde localhost e IPs de red local
 app.use(cors({
   origin: '*', // Permite peticiones dinámicas desde cualquier origen local/red
+  credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -26,7 +27,6 @@ app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 
 // Habilitar preflight para todas las rutas
-
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -164,8 +164,9 @@ app.get('/api/verify-email', async (req, res) => {
 
         const sqlUpdate = "UPDATE Perfil SET email_verificado = 1 WHERE id_perfil = :1";
         await pool.query(sqlUpdate, [sqlcheck.id_perfil]);
-        return res.redirect(`${URLS.FRONTEND}/login?verified=true`);
-
+        res.status(200).json({ message: "Correo verificado exitosamente" });
+        //return res.redirect(`${URLS.FRONTEND}/login?verified=true`);
+        
     } catch (error) {
         console.error("Error en verificación de email:", error);
         return res.status(500).send("<h1>Error interno al activar la cuenta</h1>");
