@@ -1,0 +1,20 @@
+# Usamos una imagen de Node.js
+FROM node:18-alpine
+
+# Creamos el directorio de trabajo
+WORKDIR /app
+
+# Copiamos los archivos de dependencias
+COPY package*.json ./
+
+# Instalamos las dependencias
+RUN npm install
+
+# Copiamos el resto del código del backend
+COPY . .
+
+# Exponemos el puerto de tu API
+EXPOSE 3000
+
+# Iniciamos el servidor (usando la ruta que tenías en tu archivo anterior)
+CMD ["node", "src/integrations/mysql/server.js"]

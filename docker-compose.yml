@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  # ---------------------------------------------
+  # 1. SERVICIO FRONTEND (React + Nginx)
+  # ---------------------------------------------
+  frontend-clinica:
+    build: 
+      context: .
+      dockerfile: Dockerfile # Apunta al archivo de la imagen que me enviaste
+    container_name: frontend-clinica
+    restart: always
+    ports:
+      - "7076:80"
+    networks:
+      - proxy_network
+
+  # ---------------------------------------------
+  # 2. SERVICIO BACKEND (Node.js + Oracle)
+  # ---------------------------------------------
+  backend-clinica:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend # Apunta al nuevo archivo que acabamos de crear
+    container_name: backend-clinica
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - proxy_network
+
+networks:
+  proxy_network:
+    external: true

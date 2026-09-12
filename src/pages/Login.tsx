@@ -61,7 +61,7 @@ const Login = () => {
         localStorage.removeItem('userSession');
         setLoading(false);
         setTimeout(() => {
-          window.location.reload();
+          window.location.reload(); 
         }, 3000);
       } else {
         // ¡Login exitoso! 
@@ -94,6 +94,7 @@ const Login = () => {
           ? 'Credenciales inválidas. Verifica tu correo y contraseña.'
           : error.message,
       });
+      console.log("API_URL: ", API_URL);
       setTimeout(() => {
           window.location.reload();
         }, 3000);
