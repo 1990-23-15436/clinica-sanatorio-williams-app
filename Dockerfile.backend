@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Iniciamos el servidor (usando la ruta que tenías en tu archivo anterior)
-CMD ["node", "src/integrations/mysql/server.js"]
+CMD ["node", "src/integrations/orcale/server.js"]
