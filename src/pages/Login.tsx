@@ -1,5 +1,4 @@
 import { useState , useEffect } from 'react';
-import { URLS } from '@/integrations/constantes.js';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -16,7 +15,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = '';
   const { user, setUser } = useAuth();
 
   useEffect(() => {

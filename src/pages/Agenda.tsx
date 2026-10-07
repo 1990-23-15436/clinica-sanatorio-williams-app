@@ -21,7 +21,7 @@ interface Appointment {
 const Agenda = () => {
   const { user } = useAuth();
   const { toast } = useToast();
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = '';
 
   // Estados
   const [currentDate, setCurrentDate] = useState(new Date());
