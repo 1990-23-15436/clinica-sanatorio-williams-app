@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { URLS } from '@/integrations/constantes.js';
 
 export default function VerificacionEmail() {
   const [searchParams] = useSearchParams();
@@ -13,7 +12,7 @@ export default function VerificacionEmail() {
 
     if (token) {
       // 2. Enviamos la petición silenciosa al backend
-      fetch(`${URLS.BACKEND}/api/verify-email?token=${token}`)
+      fetch(`/api/verify-email?token=${token}`)
         .then(res => res.json())
         .then(data => {
           setMensaje('¡Cuenta verificada con éxito! Redirigiendo...');
