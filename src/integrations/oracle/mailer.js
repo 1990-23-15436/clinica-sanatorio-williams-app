@@ -38,12 +38,16 @@ export async function sendVerificationEmail(to, token, nombres) {
     html: `
         <div style="font-family: sans-serif; text-align: center; padding: 20px;">
           <h2>¡Bienvenido, ${nombres}!</h2>
-          <p>Para activar tu correo electrónico, por favor haz clic en el botón de abajo:
-            <a href="${verificationLink}" 
-              style="background-color: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px;">
-              Confirmar mi cuenta
-            </a>
-          </p>
+          <p>Para activar tu correo electrónico, por favor haz clic en el botón de abajo:</p>
+          <table border="0" cellpadding="0" cellspacing="0" style="margin: 20px auto;">
+              <tr>
+                  <td align="center" bgcolor="#007bff" style="border-radius: 5px;">
+                      <a href="${verificationLink}" target="_blank" style="font-size: 16px; font-family: sans-serif; color: #ffffff; text-decoration: none; padding: 12px 25px; border-radius: 5px; display: inline-block;">
+                          Confirmar mi cuenta
+                      </a>
+                  </td>
+              </tr>
+          </table>
           <p style="margin-top: 20px; font-size: 12px; color: #666;">
             Si no creaste esta cuenta, puedes ignorar este correo.
           </p>
@@ -79,10 +83,16 @@ export async function sendAdminAuthorizationEmail(companyEmail, token, doctorDat
           </ul>
           <p>Haz clic en el siguiente botón para autorizar el ingreso de este profesional al sistema:</p>
           <div style="text-align: center; margin-top: 25px;">
-            <a href="${authorizationLink}" 
-               style="background-color: #28a745; color: white; padding: 14px 28px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
-              Autorizar Registro de Médico
-            </a>
+          <table border="0" cellpadding="0" cellspacing="0" style="margin: 20px auto;">
+              <tr>
+                  <td align="center" bgcolor="#007bff" style="border-radius: 5px;">
+                      <a href="${authorizationLink}" 
+                        style="background-color: #28a745; color: white; padding: 14px 28px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
+                        Autorizar Registro de Médico
+                      </a>
+                  </td>
+              </tr>
+          </table>
           </div>
         </div>
       `
