@@ -3,7 +3,7 @@ dotenv.config();
 
 export const URLS = {
     BACKEND: process.env.ND_URL + ':' + process.env.ND_PORT_BACKEND,
-    FRONTEND: process.env.ND_URL_PORT_FRONTEND,
+    FRONTEND: process.env.PUBLIC_APP_URL,
 };
 
 export const DB = {
