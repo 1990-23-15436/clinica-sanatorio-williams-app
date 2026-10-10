@@ -38,11 +38,12 @@ export async function sendVerificationEmail(to, token, nombres) {
     html: `
         <div style="font-family: sans-serif; text-align: center; padding: 20px;">
           <h2>¡Bienvenido, ${nombres}!</h2>
-          <p>Para activar tu correo electrónico, por favor haz clic en el botón de abajo:</p>
-          <a href="${verificationLink}" 
-             style="background-color: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px;">
-            Confirmar mi cuenta
-          </a>
+          <p>Para activar tu correo electrónico, por favor haz clic en el botón de abajo:
+            <a href="${verificationLink}" 
+              style="background-color: #007bff; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px;">
+              Confirmar mi cuenta
+            </a>
+          </p>
           <p style="margin-top: 20px; font-size: 12px; color: #666;">
             Si no creaste esta cuenta, puedes ignorar este correo.
           </p>
