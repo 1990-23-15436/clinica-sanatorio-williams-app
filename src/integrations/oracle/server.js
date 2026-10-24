@@ -661,6 +661,7 @@ app.get('/api/appointments/:doctorId', async (req, res) => {
 app.put('/api/appointments/:id/accept', async (req, res) => {
     const { doctor_id, is_accepted } = req.body;
     let date, time, nombreD;
+    console.log('accept ->', { params: req.params, body: req.body });
     try {
         const query = 'UPDATE Appointment SET aceptada = :1, id_doctor_a = :2 WHERE id_appointment = :3';
         const [result] = await pool.execute(query, [is_accepted, doctor_id, req.params.id]);
