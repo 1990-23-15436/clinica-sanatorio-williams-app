@@ -66,7 +66,7 @@ export async function sendVerificationEmail(to, token, nombres) {
 
 // 2. Correo de autorización para la empresa
 export async function sendAdminAuthorizationEmail(companyEmail, token, doctorData) {
-  const authorizationLink = `${URLS.FRONTEND}/api/authorize-profile?token=${encodeURIComponent(token)}`;
+  const authorizationLink = `${URLS.BACKEND}/api/authorize-profile?token=${encodeURIComponent(token)}`;
   const mailOptions = {
     from: EMAIL.EMAIL_USER,
     to: companyEmail,
@@ -85,7 +85,7 @@ export async function sendAdminAuthorizationEmail(companyEmail, token, doctorDat
           <div style="text-align: center; margin-top: 25px;">
           <table border="0" cellpadding="0" cellspacing="0" style="margin: 20px auto;">
               <tr>
-                  <td align="center" bgcolor="#007bff" style="border-radius: 5px;">
+                  <td align="center" bgcolor="#28a745" style="border-radius: 5px;">
                       <a href="${authorizationLink}" 
                         style="background-color: #28a745; color: white; padding: 14px 28px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
                         Autorizar Registro de Médico

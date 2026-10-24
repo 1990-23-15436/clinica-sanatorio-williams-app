@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export const URLS = {
-    BACKEND: process.env.ND_URL + ':' + process.env.ND_PORT_BACKEND,
+    BACKEND: process.env.ND_URL,
     FRONTEND: process.env.PUBLIC_APP_URL,
 };
 
