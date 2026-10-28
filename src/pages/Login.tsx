@@ -94,9 +94,6 @@ const Login = () => {
           : error.message,
       });
       console.log("API_URL: ", API_URL);
-      setTimeout(() => {
-          window.location.reload();
-        }, 3000);
       
 
     } 
