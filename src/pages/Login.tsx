@@ -15,7 +15,7 @@ const Login = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { toast } = useToast();
-  const API_URL = '';
+  const API_URL = 'https://backend-clinica.corebancarioumg.site';
   const { user, setUser } = useAuth();
 
   useEffect(() => {

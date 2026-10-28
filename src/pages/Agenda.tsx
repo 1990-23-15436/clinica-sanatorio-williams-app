@@ -21,7 +21,7 @@ interface Appointment {
 const Agenda = () => {
   const { user } = useAuth();
   const { toast } = useToast();
-  const API_URL = '';
+  const API_URL = 'https://backend-clinica.corebancarioumg.site';
 
   // Estados
   const [currentDate, setCurrentDate] = useState(new Date());

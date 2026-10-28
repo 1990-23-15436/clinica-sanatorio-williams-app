@@ -30,7 +30,7 @@ interface Appointment {
 }
 
 
-const API_URL = '';
+const API_URL = 'https://backend-clinica.corebancarioumg.site';
 
 const Citas = () => {
   const { user } = useAuth();

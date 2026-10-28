@@ -20,7 +20,7 @@ const Dashboard = () => {
   const { user, loading } = useAuth();
   const [totalPatients, setTotalPatients] = useState<number | string>('---');
   const [todayAppointments, setTodayAppointments] = useState<number | string>('---');
-  const API_URL = '';
+  const API_URL = 'https://backend-clinica.corebancarioumg.site';
 
   useEffect(() => {
     const fetchStats = async () => {
