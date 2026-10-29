@@ -69,7 +69,7 @@ const Expedientes = () => {
   const [isDeleteOpen, setIsDeleteOpen] = useState(false);
   const [patientToDelete, setPatientToDelete] = useState<string | null>(null);
   const [isConfirmUpdateOpen, setIsConfirmUpdateOpen] = useState(false);
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = "https://backend-clinica.corebancarioumg.site";
 
   const [formData, setFormData] = useState({  
     fullName: '',
