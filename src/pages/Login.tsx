@@ -91,7 +91,7 @@ const Login = () => {
         title: 'Error al iniciar sesión',
         description: error.message === 'Invalid login credentials' 
           ? 'Credenciales inválidas. Verifica tu correo y contraseña.'
-          : 'Ocurrió un error al iniciar sesión.'
+          : 'Credenciales inválidas. Verifica tu correo y contraseña.'
       });
       console.log("API_URL: ", API_URL);
       
