@@ -40,7 +40,7 @@ const Recetas = () => {
   const [selectedPrescription, setSelectedPrescription] = useState<Prescription | null>(null);
   const [submitting, setSubmitting] = useState(false);
   const { toast } = useToast();
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = 'https://backend-clinica.corebancarioumg.site';t.meta.env.VITE_API_URL;
 
   const [formData, setFormData] = useState({
     patientName: '',

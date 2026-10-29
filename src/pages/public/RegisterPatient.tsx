@@ -38,7 +38,7 @@ const RegisterPatient = () => {
   const { toast } = useToast();
   const [tempFiles, setTempFiles] = useState<{file: File, preview: string}[]>([]);
   const navigate = useNavigate();
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = 'https://backend-clinica.corebancarioumg.site';
 
   const [formData, setFormData] = useState({
     fullName: '',

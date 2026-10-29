@@ -8,7 +8,7 @@ import { ArrowLeft, Calendar, Clock, Fingerprint, Loader2 } from "lucide-react";
 import { useNavigate } from 'react-router-dom';
 
 export const GenerarCita = () => {
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = 'https://backend-clinica.corebancarioumg.site';
   const { toast } = useToast();
   const navigate = useNavigate();
   const [isDialogOpen, setIsDialogOpen] = useState(false);

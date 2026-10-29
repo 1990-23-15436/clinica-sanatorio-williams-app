@@ -20,7 +20,7 @@ const Register = () => {
   });
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
-  const API_URL = import.meta.env.VITE_API_URL;
+  const API_URL = 'https://backend-clinica.corebancarioumg.site';t.meta.env.VITE_API_URL;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
