@@ -46,7 +46,7 @@ const HomePaciente = () => {
       <header className="sticky top-0 z-50 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 bg-white/95 px-4 py-4 backdrop-blur-md md:px-8">
         <a href="#inicio" className="flex items-center gap-3">
           <img
-            src="../assets/Logo_(Sin_Fondo).png"
+            src="/assets/Logo_(Sin_Fondo).png"
             alt="Sanatorio Williams"
             className="h-11 w-auto object-contain"
           />
