@@ -45,11 +45,11 @@ const HomePaciente = () => {
       {/* Navegación */}
       <header className="sticky top-0 z-50 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 bg-white/95 px-4 py-4 backdrop-blur-md md:px-8">
         <a href="#inicio" className="flex items-center gap-3">
-          <img
+          {/* <img
             src="/assets/Logo_(Sin_Fondo).png"
             alt="Sanatorio Williams"
             className="h-11 w-auto object-contain"
-          />
+          /> */}
           <div className="hidden leading-tight sm:block">
             <h2 className="font-display text-lg font-bold text-slate-900">Clínica Sanatorio Williams</h2>
             <span className="text-xs font-semibold uppercase tracking-wide text-sky-600">
