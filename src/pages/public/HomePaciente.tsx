@@ -46,7 +46,7 @@ const HomePaciente = () => {
       <header className="sticky top-0 z-50 flex flex-wrap items-center justify-between gap-4 border-b border-slate-200 bg-white/95 px-4 py-4 backdrop-blur-md md:px-8">
         <a href="#inicio" className="flex items-center gap-3">
           <img
-            src="../assets/Logo (Sin Fondo).png"
+            src="../assets/Logo_(Sin Fondo).png"
             alt="Sanatorio Williams"
             className="h-11 w-auto object-contain"
           />
@@ -72,6 +72,11 @@ const HomePaciente = () => {
           <li className="hidden md:block">
             <a href="#nosotros" className="text-sm font-medium text-slate-700 transition-colors hover:text-sky-600">
               Nosotros
+            </a>
+          </li>
+          <li className="hidden md:block">
+            <a href="#contacto" className="text-sm font-medium text-slate-700 transition-colors hover:text-sky-600">
+              Contacto
             </a>
           </li>
           <li>
@@ -209,6 +214,39 @@ const HomePaciente = () => {
         </div>
       </section>
 
+      {/* Sección de Contacto y Redes Sociales */}
+      <section id="contacto" className="mx-auto max-w-6xl px-4 pb-20 md:px-8">
+        <div className="rounded-3xl border border-sky-100 bg-gradient-to-br from-sky-50 via-white to-teal-50 p-8 shadow-xl sm:p-12 text-center">
+          <span className="mb-2 inline-block text-sm font-bold uppercase tracking-widest text-sky-600">
+            Estamos para Ayudarte
+          </span>
+          <h2 className="mb-4 font-display text-3xl font-bold text-slate-900">
+            Contacto y Redes Sociales
+          </h2>
+          <p className="mx-auto mb-8 max-w-xl text-slate-500">
+            Comunícate con nosotros de forma directa a través de nuestro canal de WhatsApp o visita nuestra página oficial de Facebook para conocer más novedades.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <a
+              href="https://wa.me/50247302974"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-full bg-emerald-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-emerald-600/30 transition-all hover:-translate-y-0.5 hover:bg-emerald-700 hover:shadow-emerald-600/45"
+            >
+              💬 WhatsApp (+502 4730 2974)
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100066779434584"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2.5 rounded-full bg-blue-600 px-6 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-600/30 transition-all hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-blue-600/45"
+            >
+              👥 Facebook Oficial
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Nosotros */}
       <section id="nosotros" className="mx-auto max-w-6xl px-4 pb-20 md:px-8">
         <div className="rounded-3xl border border-slate-200 bg-slate-50 p-8 sm:p-14">
@@ -330,7 +368,7 @@ const HomePaciente = () => {
           <div>
             <h4 className="mb-5 text-base text-white">Información de Contacto</h4>
             <p className="mb-2 text-sm text-slate-300">📍 Atención Médica y Consultas</p>
-            <p className="mb-2 text-sm text-slate-300">📞 Teléfono: (502) 2345-6789</p>
+            <p className="mb-2 text-sm text-slate-300">📞 Teléfono: (502) 4730-2974</p>
             <p className="text-sm text-slate-300">⏰ Horarios: Lunes a Sábado de 8:00 AM a 6:00 PM</p>
           </div>
         </div>
