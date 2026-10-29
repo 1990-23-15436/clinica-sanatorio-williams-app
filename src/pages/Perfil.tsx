@@ -20,7 +20,7 @@ const Perfil = () => {
   });
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
-  const API_URL = 'https://backend-clinica.corebancarioumg.site';t.meta.env.VITE_API_URL;
+  const API_URL = 'https://backend-clinica.corebancarioumg.site';
 
   if (formData.lastnames === undefined || formData.lastnames === null) {
     formData.lastnames = '';
